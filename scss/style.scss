@@ -1,0 +1,375 @@
+// Шрифты
+@import "./fonts";
+// Сброс стилей
+@import "./reset";
+// Общие стили
+@import "./common";
+// Навигация
+@import "./nav";
+// Футер
+@import "./footer";
+// Стили тегов
+@import "./tags";
+
+.ibg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &_logobg{
+        background-position: 110% 30%;
+    }
+
+    &__image {
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.smm {
+    position: relative;
+    padding-top: 159px;
+    padding-bottom: 219px;
+    overflow: hidden;
+
+    @include for-tablets {
+        padding-top: 65px;
+        padding-bottom: 120px;
+    }
+
+    @include for-grand-mobiles {
+        padding-top: 459px;
+        padding-bottom: 113px;
+    }
+
+    @include for-mobiles {
+        padding-top: 340px;
+        padding-bottom: 50px;
+        @media (max-width: 570px) {
+            padding-top: 65vw;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        display: block;
+        width: 650px;
+        max-width: 40%;
+        padding-bottom: 20%;
+        right: 0;
+        top: 70px;
+        content: "";
+        background-color: #d1e4f3;
+
+        @include for-grand-mobiles {
+            right: 20%;
+        }
+
+        @include for-mobiles {
+            top: 38px;
+            max-width: 60%;
+            padding-bottom: 40%;
+            @media (min-width: 620px) {
+                padding-bottom: 230px;
+            }
+        }
+    }
+
+    &::after {
+        position: absolute;
+        display: block;
+        width: 972px;
+        max-width: 55%;
+        height: 534px;
+        right: 0;
+        top: 100px;
+        content: "";
+        background-image: url("../assets/img/digital-marketing.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 2;
+
+        @include for-grand-mobiles {
+            width: 628px;
+            height: 459px;
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
+        }
+
+        @include for-mobiles {
+            max-width: 85%;
+            height: 260px;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-position: center top;
+        }
+    }
+
+    &__container {
+        position: relative;
+
+        &::before {
+            left: 0;
+            top: 60px;
+            max-width: 740px;
+            content: "DIGITAL";
+        }
+    }
+
+    &__title {
+        padding-bottom: 22px;
+        width: 45%;
+        max-width: 600px;
+        @include for-grand-mobiles {
+            width: 100%;
+        }
+
+        @include for-mobiles {
+            width: 100%;
+        }
+    }
+
+    &__description {
+        width: 45%;
+        margin-bottom: 70px;
+        line-height: 140%;
+
+        @include for-grand-mobiles {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        @include for-mobiles {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        margin-top: 11px;
+        margin-bottom: 36px;
+
+        @include for-mobiles {
+            margin-top: 16px;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        height: 30px;
+        border-right: 1px solid #c4c4c4;
+
+        &:last-of-type {
+            border: none;
+        }
+
+        @for $i from 1 to 10 {
+            &:nth-of-type(#{$i}) a {
+                background-image: url("../assets/icons/social-icons-black/#{$i}.svg");
+            }
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+}
+
+.services {
+    padding-top: 90px;
+    padding-bottom: 50px;
+
+    &__container {
+    }
+
+    &__title {
+    }
+
+    &__grid {
+    }
+
+    &__button {
+        @extend %block-centered-X;
+    }
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+        min-width: 100px;
+        flex-basis: calc(33.3% - 13.5px);
+        height: 392px;
+        max-height: calc(392px - 0.14 * (1920px - 100vw));
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        &-icon{
+            pointer-events: none;
+        }
+
+        &-title{
+            margin-top: 10px;
+            color: white;
+
+            @media screen and (max-width: 1365px ){
+                font-size: calc(22px - 0.02 * (1366px - 100vw));
+                line-height: 100%;
+            }
+        }
+
+        &_black {
+            background-color: #3e3f43;
+        }
+
+        &_blue {
+            background-color: #3ea3f2;
+        }
+
+        @include for-grand-mobiles {
+            flex-basis: calc(33.3% - 6.65px);
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            padding-left: 14px;
+            padding-right: 14px;
+
+
+            &-icon{
+                max-width: 22px;
+                max-height: 22px;
+            }
+
+            &-title{
+                font-size: 16px;
+            }
+        }
+
+        @include for-mobiles {
+            flex-basis: 100%;
+            margin-bottom: 8px;
+            padding-bottom: 10px;
+            padding-left: 14px;
+            padding-right: 14px;
+
+            max-height: calc(333px - 0.14 * (1920px - 100vw));
+
+            &-icon{
+                max-width: 22px;
+                max-height: 22px;
+            }
+
+            &-title{
+                font-size: calc(16px - 0.01 * (768px - 100vw));
+            }
+        }
+
+        &_big {
+            flex-basis: calc(50% - 10px);
+
+            @include for-grand-mobiles {
+                flex-basis: calc(50% - 5px);
+                margin-bottom: 10px;
+            }
+
+            @include for-mobiles{
+                flex-basis: 100%;
+                margin-bottom: 8px;
+                max-height: calc( 1.7 * (333px - 0.14 * (1920px - 100vw)));           
+             }
+        }
+
+
+
+        &_constant {
+            flex-basis: calc(50% - 10px);
+            height: calc(50% - 10px);
+
+
+            @include for-grand-mobiles {
+                flex-basis: calc(50% - 5px);
+                height: calc(50% - 5px);
+
+                &:first-child .grid__item-title{
+                    margin-top: 5px;
+                    line-height: 15px;
+                }
+            }
+
+            @include for-mobiles{
+                flex-basis: calc(50% - 4px);
+                height: calc(50% - 4px);
+                padding-left: 7px;
+                padding-right: 7px;
+                padding-bottom: 5px;
+
+
+                &:first-child .grid__item-title{
+                    margin-top: 3px;
+                    line-height: 12px;
+                }
+            }
+
+        }
+    }
+
+    &__innergrid {
+        height: 392px;
+        max-height: calc(392px - 0.14 * (1920px - 100vw));
+        margin-bottom: 20px;
+        flex-basis: calc(50% - 10px);
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include for-grand-mobiles {
+            flex-basis: calc(50% - 5px);
+            margin-bottom: 10px;
+        }
+        @include for-mobiles {
+            flex-basis: 100%;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__desktopline {
+        @media screen and (min-width: 768px) {
+            flex-basis: 100%;
+
+            &-item {
+                height: calc(392px - 0.21 * (1920px - 100vw));
+                flex-basis: calc(25% - 15px);
+
+                @include for-grand-mobiles{
+                    flex-basis: calc(25% - 7.5px);
+                }
+            }
+        }
+    }
+}

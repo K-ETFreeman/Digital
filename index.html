@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./scss/style.css">
+</head>
+
+<body>
+  <header class="header" id="header">
+
+    <div class="header__contacts header-contacts">
+      <div class="container header-contacts__container">
+        <ul class="header-contacts__list">
+          <li class="header-contacts__list-item">
+            <div class="icon__phone"></div><a href="tel:+78129938545">+7 (812) 993-85-45</a>
+          </li>
+          <li class="header-contacts__list-item">
+            <div class="icon__phone"></div><a href="tel:+74957400598">+ 7 (495) 740-05-98</a>
+          </li>
+          <li class="header-contacts__list-item">
+            <div class="icon__mail"></div><a href="mailto:info@1btl.ru">info@1btl.ru</a>
+          </li>
+          <li class="header-contacts__list-item button_callback">
+            <div class="icon__sphone"></div><a href="">Обратный звонок</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="position:absolute;top:-9999px;left:-9999px;">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="bars-icon" viewBox="0 0 30 17">
+          <rect width="30" height="2" fill="#3e3f43" />
+          <rect y="7" width="30" height="2" fill="#3e3f43" />
+          <rect y="15" width="30" height="2" fill="#3e3f43" />
+        </symbol>
+
+        <symbol id="search-icon" viewBox="0 0 26 28">
+          <path
+            d="M10.2 0.800049C4.57266 0.800049 0 5.3727 0 11C0 16.6274 4.57266 21.2 10.2 21.2C12.4266 21.2 14.4844 20.4829 16.1625 19.2688L24.0563 27.1438L25.7438 25.4563L17.9438 17.6375C19.4766 15.8516 20.4 13.5336 20.4 11C20.4 5.3727 15.8273 0.800049 10.2 0.800049ZM10.2 2.00005C15.1781 2.00005 19.2 6.02192 19.2 11C19.2 15.9782 15.1781 20 10.2 20C5.22188 20 1.2 15.9782 1.2 11C1.2 6.02192 5.22188 2.00005 10.2 2.00005Z"
+            fill="#3e3f43" />
+        </symbol>
+
+        <symbol id="right-arrow" viewBox="0 0 11 20">
+          <path
+            d="M0.884603 0C0.525384 0 0.203978 0.218281 0.0699155 0.55C-0.0658658 0.881719 0.0149155 1.26156 0.271009 1.51078L8.44882 9.68859L0.271009 17.8664C0.0406967 18.0864 -0.0521158 18.4147 0.0286655 18.7241C0.109447 19.0317 0.350072 19.2723 0.657728 19.3531C0.967103 19.4339 1.29538 19.3411 1.51538 19.1108L10.3154 10.3108C10.6591 9.96703 10.6591 9.41016 10.3154 9.06641L1.51538 0.266406C1.34867 0.09625 1.12179 0 0.884603 0Z"
+            fill="black" />
+        </symbol>
+
+        <symbol id="left-arrow" viewBox="0 0 11 20">
+          <path transform="rotate(180 5.286587715148925,9.690889358520508) " id="svg_1" fill="black"
+            d="m0.8846,0c-0.35922,0 -0.68062,0.21828 -0.81468,0.55c-0.13579,0.33172 -0.055,0.71156 0.20109,0.96078l8.17781,8.17781l-8.17781,8.17781c-0.23031,0.22 -0.32313,0.5483 -0.24234,0.8577c0.08078,0.3076 0.3214,0.5482 0.62906,0.629c0.30937,0.0808 0.63765,-0.012 0.85765,-0.2423l8.80002,-8.8c0.3437,-0.34377 0.3437,-0.90064 0,-1.24439l-8.80002,-8.8c-0.16671,-0.17016 -0.39359,-0.26641 -0.63078,-0.26641z" />
+        </symbol>
+
+        <symbol id="close-icon" viewBox="0 0 12 12">
+          <path
+            d="M11.541 9.32458C12.153 9.93662 12.153 10.9289 11.541 11.541C10.9289 12.153 9.93662 12.153 9.32458 11.541L0.459029 2.67542C-0.153009 2.06338 -0.15301 1.07107 0.459029 0.459029C1.07107 -0.15301 2.06338 -0.15301 2.67542 0.459029L11.541 9.32458Z"
+            fill="#3EA3F2" />
+          <path
+            d="M2.67542 11.541C2.06338 12.153 1.07107 12.153 0.459029 11.541C-0.15301 10.9289 -0.15301 9.93662 0.459029 9.32458L9.32458 0.45903C9.93662 -0.153009 10.9289 -0.153009 11.541 0.45903C12.153 1.07107 12.153 2.06338 11.541 2.67542L2.67542 11.541Z"
+            fill="#3EA3F2" />
+        </symbol>
+
+
+        <symbol id="reset-icon" viewBox="0 0 9 9">
+          <path
+            d="M8.31115 6.39744C8.7225 6.80879 8.7225 7.47572 8.31115 7.88707C7.89979 8.29843 7.23286 8.29843 6.82151 7.88707L0.862958 1.92852C0.451606 1.51717 0.451605 0.850237 0.862957 0.438885C1.27431 0.0275331 1.94124 0.027533 2.3526 0.438885L8.31115 6.39744Z"
+            fill="#434343" />
+          <path
+            d="M2.3526 7.88707C1.94124 8.29843 1.27431 8.29843 0.862957 7.88707C0.451605 7.47572 0.451605 6.80879 0.862957 6.39744L6.82151 0.438886C7.23286 0.0275336 7.8998 0.0275338 8.31115 0.438886C8.7225 0.850238 8.7225 1.51717 8.31115 1.92852L2.3526 7.88707Z"
+            fill="#434343" />
+        </symbol>
+      </svg>
+    </div>
+
+    <div class="navigation" id="navigation">
+      <div class="navigation-content container">
+        <button class="navigation-burger-button">
+          <svg width="30" height="17">
+            <use xlink:href="#bars-icon"></use>
+          </svg>
+        </button>
+        <a href="/" class="navigation-logo"></a>
+        <nav class="navigation-nav" role="navigation">
+
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a href="/">Услуги</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">Возможности</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">Digital</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">BTL-партнерство</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">Персонал</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">Новости</a>
+            </li>
+            <li class="navigation-item">
+              <a href="/">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="navigation-search">
+            <form class="navigation-search-form" action="/" method="get">
+              <input type="text" name="query" class="navigation-search-input input"
+                placeholder="Здесь может быть ваш запрос" autocomplete="off">
+              <button type="reset" class="navigation-search-reset">
+                <svg width="9" height="9">
+                  <g opacity="0.3">
+                    <use xlink:href="#reset-icon"></use>
+                  </g>
+                </svg>
+              </button>
+            </form>
+
+            <button class="navigation-search-button">
+              <svg width="26" height="28">
+                <use xlink:href="#search-icon"></use>
+              </svg>
+            </button>
+          </div>
+
+        </nav>
+      </div>
+
+      <div class="header__subnavigation subnavigation">
+        <ul class="subnavigation__list container">
+          <li class="subnavigation__listitem"><a href="">Тизерная реклама</a></li>
+          <li class="subnavigation__listitem"><a href="">SMM Продвижение</a></li>
+          <li class="subnavigation__listitem"><a href="">Медийная и баннерная реклама</a></li>
+          <li class="subnavigation__listitem"><a href="">E-mail Маркетинг</a></li>
+          <li class="subnavigation__listitem"><a href="">SERM</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="header__position">
+      <ul class="position__list container">
+        <li class="position__listitem"><a href="">Clever Marketing</a></li>
+        <li class="position__listitem"><a href="">Digital</a></li>
+      </ul>
+    </div>
+
+  </header>
+
+  <div class="smm">
+    <div class="container smm__container background-text">
+      <h1 class="smm__title supertitle">Комплексный интернет маркетинг.</h1>
+      <p class="smm__description description">Подберем индивидуальный формат Digital-продвижения с учетом особенностей
+        бизнеса и современных трендов, для достижения максимального результата. Специалисты нашего digital-агентства
+        используют все доступные инструменты интернет-маркетинга.</p>
+      <button class="button">Связаться с нами</button>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container services__container">
+      <h2 class="title services__title">Наши услуги</h2>
+      <div class="services__grid grid">
+
+        <a href="/" class="grid__item grid__item_black ">
+          <img class="grid__item-icon" src="./assets/icons/services/serv1.svg" alt="icon" >
+          <h2 class="subtitle grid__item-title">Продвижение сайтов</h2>
+        </a>
+
+        <a href="/" class="grid__item grid__item_blue ">
+          <img class="grid__item-icon" src="./assets/icons/services/serv2.svg" alt="icon" >
+          <h2 class="subtitle grid__item-title">SMM Продвижение</h2>
+        </a>
+
+        <a href="/" class="grid__item ">
+          <img class="grid__item-icon" src="./assets/icons/services/serv3.svg" alt="icon" >
+          <h2 class="subtitle grid__item-title">Контекстная реклама</h2>
+          <img class="grid__item-bg ibg__image" src="./assets/img/services/services_3.jpg" alt="">
+        </a>
+
+        <a href="/" class="grid__item grid__item_big ">
+          <img class="grid__item-icon" src="./assets/icons/services/serv4.svg" alt="icon" >
+          <h2 class="subtitle grid__item-title">Вирусная реклама</h2>
+          <img class="grid__item-bg ibg__image" src="./assets/img/services/services_4.jpg" alt="">
+        </a>
+
+        <div class="grid grid__innergrid">
+
+          <a href="/" class="grid__item grid__item_constant ">
+            <img class="grid__item-icon" src="./assets/icons/services/serv5.svg" alt="icon" >
+            <h2 class="subtitle grid__item-title">Маркетинг влияния<br>(реклама у блогеров)</h2>
+            <img class="grid__item-bg ibg__image" src="./assets/img/services/services_5.jpg" alt="">
+          </a>
+
+          <a href="/" class="grid__item grid__item_constant grid__item_black ">
+            <img class="grid__item-icon" src="./assets/icons/services/youtube_icon.svg" alt="icon" >
+            <h2 class="subtitle grid__item-title">Медийная реклама</h2>
+          </a>
+
+          <a href="/" class="grid__item grid__item_constant ">
+            <img class="grid__item-icon" src="./assets/icons/services/serv7.svg" alt="icon" >
+            <h2 class="subtitle grid__item-title">E-mail Маркетинг</h2>
+            <img class="grid__item-bg ibg__image" src="./assets/img/services/services_7.jpg" alt="">
+          </a>
+
+          <a href="/" class="grid__item grid__item_constant ">
+            <img class="grid__item-icon" src="./assets/icons/services/serv8.svg" alt="icon" >
+            <h2 class="subtitle grid__item-title">Имидж в интернете</h2>
+            <img class="grid__item-bg ibg__image" src="./assets/img/services/services_8.jpg" alt="">
+          </a>
+
+        </div>
+
+        <a href="/" class="grid__item grid__item_blue ">
+          <img class="grid__item-icon" src="./assets/icons/services/serv9.svg" alt="icon" >
+          <h2 class="subtitle grid__item-title">Управление репутацией в интернете (SERM)</h2>
+        </a>
+
+        <a href="/" class="grid__item grid__item_black ">
+          <img class="grid__item-icon" src="./assets/icons/services/serv10.svg" alt="icon" >
+          <h2 class="subtitle grid__item-title">Реклама на тематических сайтах</h2>
+        </a>
+        <a href="/" class="grid__item ">
+          <img class="grid__item-icon" src="./assets/icons/services/serv11.svg" alt="icon" >
+          <h2 class="subtitle grid__item-title">Продвижение мобильных приложений</h2>
+          <img class="grid__item-bg ibg__image" src="./assets/img/services/services_11.jpg" alt="">
+        </a>
+
+        <div class="grid__innergrid grid__desktopline">
+
+          <a href="/" class="grid__item grid__item_constant grid__desktopline-item ">
+            <img class="grid__item-icon" src="./assets/icons/services/serv12.svg" alt="icon" >
+            <h2 class="subtitle grid__item-title">Тизерная реклама</h2>
+            <img class="grid__item-bg ibg__image" src="./assets/img/services/services_12.jpg" alt="">
+          </a>
+
+          <a href="/" class="grid__item grid__item_constant grid__desktopline-item ">
+            <img class="grid__item-icon" src="./assets/icons/services/serv13.svg" alt="icon" >
+            <h2 class="subtitle grid__item-title">Увеличение лояльности</h2>
+            <img class="grid__item-bg ibg__image" src="./assets/img/services/services_13.jpg" alt="">
+          </a>
+
+          <a href="/" class="grid__item grid__item_constant grid__desktopline-item grid__item_blue ">
+            <img class="grid__item-icon" src="./assets/icons/services/serv14.svg" alt="icon" >
+            <h2 class="subtitle grid__item-title">Таргетированная реклама</h2>
+          </a>
+
+          <a href="/" class="grid__item grid__item_constant grid__desktopline-item grid__item_black ibg">
+            <object class="grid__item-icon" type="image/svg+xml" data="./assets/icons/services/serv15.svg" onload="console.log(this.contentDocument);" ></object>
+            <h2 class="subtitle grid__item-title">Узнаваемость бренда</h2>
+          </a>
+
+        </div>
+      </div>
+      <button class="button services__button">Получить консультацию</button>
+    </div>
+  </section>
+
+
+
+  <footer class="footer__container">
+    <div class="container">
+
+      <div class="footer__content flex-container">
+
+        <div class="footer__block-logo">
+          <a href="">
+            <div class="footer__logo"></div>
+          </a>
+          <p class="footer__description">Маркетинговое продвижение от разработки до реализации во всех регионах России.
+          </p>
+        </div>
+
+        <ul class="footer__link-list">
+          <li class="footer__link"><a href="">Услуги</a></li>
+          <li class="footer__link"><a href="">Возможности</a></li>
+          <li class="footer__link"><a href="">BTL-партнерство</a></li>
+          <li class="footer__link"><a href="">Digital</a></li>
+          <li class="footer__link"><a href="">Контакты</a></li>
+          <li class="footer__link"><a href="">Новости</a></li>
+          <li class="footer__link"><a href="">Персонал</a></li>
+        </ul>
+
+        <ul class="footer__adress-list">
+          <li class="footer__address">
+            <div class="icon__place"></div>г. Москва, ул. Новоостаповская, 6А, стр. 3
+          </li>
+          <li class="footer__address">
+            <div class="icon__phone"></div>+ 7 (495) 7400598
+          </li>
+          <li class="footer__address">
+            <div class="icon__place"></div>г. Санкт-Петербург ул. Цветочная 16/1, БЦ Осипофф
+          </li>
+          <li class="footer__address">
+            <div class="icon__phone"></div>+7 (812) 993-85-45
+          </li>
+          <li class="footer__address">
+            <div class="icon__mail"></div>info@1btl.ru
+          </li>
+        </ul>
+
+        <div class="footer__questions">
+          <h3 class="footer__question-title">Остались вопросы?</h3>
+          <p class="footer__question-subtitle">Задайте их нам прямо сейчас!</p>
+          <button class="footer__question-btn">Задать вопрос</button>
+          <div class="footer__schedule">
+            <div class="icon__watch"></div>
+            <p><span class="secondary">Будни: </span>09.00-18.00</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom flex-container ">
+        <p class="footer__copyright">Copyright © Clever marketing, 2019 </p>
+        <a href="" class="footer__confidencial">Политика конфиденциальности</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>
