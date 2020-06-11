@@ -10,12 +10,7 @@ function ibg() {
         else {
             obj = ibg[i].getElementsByClassName('grid__item-icon')[0];
 
-            let a = console.log(typeof(obj));
-            console.log(a);
-            console.log(obj.contentDocument);
-
-
-
+            if(obj) console.log(obj.contentDocument);
         }
     }
 }
