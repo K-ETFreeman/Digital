@@ -1,6 +1,6 @@
 //COLORS
-$blue_color: #3EA3F2;
-$blue_hover:#0A90FF;
+$blue_color: #3ea3f2;
+$blue_hover: #0a90ff;
 
 // LAYOUTS
 
@@ -29,6 +29,54 @@ $blue_hover:#0A90FF;
 	}
 }
 
+@mixin for-all-mobiles {
+	@media screen and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin for-not-mobiles {
+	@media screen and (min-width: 1025px) {
+		@content;
+	}
+}
+
+@mixin container-shadow {
+	box-shadow: 0 80px 70px -65px rgba(0, 0, 0, 0.5);
+
+	@include for-tablets() {
+		box-shadow: 0 80px 70px -65px rgba(0, 0, 0, 0.5);
+	}
+
+	@media screen and (max-width: 1024px) {
+		box-shadow: 0 60px 70px -55px rgba(0, 0, 0, 0.5);
+	}
+}
+
+@mixin container-twoshadow {
+	box-shadow: -227px -73px 0px 0px #d1e4f3, 0 80px 70px -65px rgba(0, 0, 0, 0.5);
+
+	@include for-tablets() {
+		box-shadow: -87px -55px 0px 0px #d1e4f3, 0 80px 70px -65px rgba(0, 0, 0, 0.5);
+	}
+
+	@media screen and (max-width: 1024px) {
+		box-shadow: -92px -22px 0px 0px #d1e4f3, 0 60px 70px -55px rgba(0, 0, 0, 0.5);
+	}
+}
+
+.notmobile {
+	@include for-all-mobiles {
+		display: none;
+	}
+}
+
+.mobile {
+	@include for-not-mobiles {
+		display: none;
+	}
+}
+
 // TEMPLATES
 %block-centered-X {
 	position: relative;
@@ -43,7 +91,7 @@ $blue_hover:#0A90FF;
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 	background-color: #f8f8f8;
 }
 
@@ -51,6 +99,19 @@ body {
 	width: 86.25%;
 	max-width: 1450px;
 	margin: 0 auto;
+}
+
+.container_rightfree {
+	@include for-not-mobiles {
+		width: 93.125%;
+		max-width: 1688px;
+		margin-left: auto;
+		margin-right: 0;
+
+		@media screen and (min-width: 1920px) {
+			margin-left: calc((100vw - 1450px) / 2);
+		}
+	}
 }
 
 a {
@@ -73,26 +134,26 @@ a {
 	transition: background-color 0.15s ease-out;
 	&:focus {
 		border-color: #3ea3f2;
-	  }
+	}
 	&::placeholder {
 		font-family: Montserrat;
 		font-style: normal;
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 1;
-		color: #AEAEAE;
+		color: #aeaeae;
 		@include for-mobiles() {
 			font-size: 12px;
 			font-weight: normal;
 		}
-	}  
+	}
 	&::-webkit-input-placeholder {
 		font-family: Montserrat;
 		font-style: normal;
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 1;
-		color: #AEAEAE;
+		color: #aeaeae;
 		@include for-mobiles() {
 			font-size: 12px;
 			font-weight: normal;
@@ -104,7 +165,7 @@ a {
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 1;
-		color: #AEAEAE;
+		color: #aeaeae;
 		@include for-mobiles() {
 			font-size: 12px;
 			font-weight: normal;
@@ -116,7 +177,7 @@ a {
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 1;
-		color: #AEAEAE;
+		color: #aeaeae;
 		@include for-mobiles() {
 			font-size: 12px;
 			font-weight: normal;
@@ -128,15 +189,20 @@ a {
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 1;
-		color: #AEAEAE;
+		color: #aeaeae;
 		@include for-mobiles() {
 			font-size: 12px;
 			font-weight: normal;
 		}
-
 	}
-  }
-  
+}
+
+.button-container{
+	display: inline-block;
+	>.button{
+		width: 100%;
+	}
+}
 
 .button {
 	height: 46px;
@@ -161,7 +227,7 @@ a {
 		padding: 12px 29px;
 		font-size: 12px;
 	}
-	
+
 	@include for-grand-mobiles() {
 		font-size: 16px;
 	}
@@ -175,6 +241,18 @@ a {
 		color: #ffffff;
 		background-color: #1a87e1;
 		box-shadow: 0 15px 30px rgba(62, 163, 242, 0.7);
+	}
+
+	&_lightshadow{
+		box-shadow: 0 5px 10px rgba(62, 163, 242, 0.3);
+
+		&:hover {
+			box-shadow: 0 10px 12px rgba(62, 163, 242, 0.6);
+		}
+	
+		&:active {
+			box-shadow: 0 15px 20px rgba(62, 163, 242, 0.7);
+		}
 	}
 }
 
@@ -192,10 +270,10 @@ a {
 
 .supertitle {
 	font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 58px;
-	color: #3E3F43;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 58px;
+	color: #3e3f43;
 	@include for-grand-mobiles {
 		font-size: 36px;
 	}
@@ -206,7 +284,7 @@ a {
 
 //title
 .title {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
 	font-size: 36px;
 	line-height: 1.2;
@@ -214,7 +292,7 @@ a {
 	@include for-mobiles() {
 		font-size: 18px;
 	}
-	@include for-grand-mobiles(){
+	@include for-grand-mobiles() {
 		font-size: 32px;
 		line-height: 1.2;
 	}
@@ -222,11 +300,11 @@ a {
 
 //subtitle
 .subtitle {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
 	font-size: 22px;
 	line-height: 1.2;
-	color: #3E3F43;
+	color: #3e3f43;
 
 	@include for-mobiles() {
 		font-size: 14px;
@@ -246,8 +324,40 @@ a {
 		font-weight: normal;
 		font-size: 22px;
 		line-height: 1.2;
-		color: #3E3F43;
+		color: #3e3f43;
+	}
+}
 
+//another text
+@mixin text22-22-16-12 {
+	color: #3e3f43;
+	font-family: Montserrat;
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 100%;
+
+	@include for-grand-mobiles {
+		font-size: 16px;
+	}
+
+	@include for-mobiles {
+		font-size: calc(16px - (728px - 100vw) / 102);
+	}
+}
+//number
+.number {
+	color: #3ea3f2;
+	font-family: Montserrat;
+	font-size: 36px;
+	font-weight: 400;
+	white-space: nowrap;
+
+	@include for-grand-mobiles() {
+		font-size: 30px;
+	}
+
+	@include for-mobiles() {
+		font-size: 22px;
 	}
 }
 
@@ -257,7 +367,7 @@ a {
 	font-weight: 300;
 	font-size: 18px;
 	line-height: 120%;
-	color: #3E3F43;
+	color: #3e3f43;
 	@include for-grand-mobiles {
 		font-size: 16px;
 		line-height: 1.4;
@@ -266,8 +376,6 @@ a {
 		font-size: 12px;
 		line-height: 1.4;
 	}
-
-
 }
 
 .background-text {
@@ -279,8 +387,8 @@ a {
 		font-weight: 800;
 		font-size: 147px;
 		line-height: 1.2;
-		color: #E8E8E8;
-		content: '';
+		color: #e8e8e8;
+		content: "";
 		opacity: 0.4;
 
 		@include for-grand-mobiles {
@@ -298,7 +406,7 @@ a {
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 1.2;
-	color: #68696C;
+	color: #68696c;
 	@include for-grand-mobiles() {
 		font-size: 14px;
 		line-height: 16px;
@@ -314,7 +422,7 @@ a {
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 1.2;
-	color: #3E3F43;
+	color: #3e3f43;
 	@include for-grand-mobiles() {
 		font-size: 14px;
 	}
@@ -327,7 +435,7 @@ a {
 		font-weight: normal;
 		font-size: 14px;
 		line-height: 1.2;
-		color: #3E3F43;
+		color: #3e3f43;
 	}
 }
 
@@ -337,7 +445,7 @@ a {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 140%;
-	color: #3E3F43;
+	color: #3e3f43;
 	@include for-grand-mobiles() {
 		font-size: 12px;
 	}
@@ -359,14 +467,55 @@ a {
 	position: fixed;
 	left: 3%;
 	top: 231px;
-	background-image: url('../assets/icons/up_button.svg');
+	background-image: url("../assets/icons/up_button.svg");
 	background-repeat: no-repeat;
 	background-color: transparent;
 	z-index: 999;
-	
+
 	&_display {
 		visibility: visible;
 		transition: visibility 2s ease-in;
 	}
 }
 
+.video {
+	background-image: url("../assets/img/video-placeholder.jpg");
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	cursor: pointer;
+
+	@include container-twoshadow;
+
+	&__icon {
+		transition: 0.3s ease;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 12%;
+		opacity: 0.9;
+		fill: #282928;
+		height: auto;
+	}
+
+	&:hover &__icon {
+		fill: red;
+	}
+
+	&__shapecreator {
+		background-image: url("../assets/img/youtube-interface.png");
+		background-position: top center;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		padding-bottom: 56.2%;
+		iframe {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+		}
+	}
+}

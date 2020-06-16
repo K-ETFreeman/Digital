@@ -1,6 +1,8 @@
 .footer {
 
     &__container {
+        overflow: hidden;
+        width: 100%;
         background-color: #F0F0F0;
     }
 
@@ -52,6 +54,7 @@
         @include for-grand-mobiles() {
             flex: 1 1 50%;
             display: flex;
+            max-width: 50%;
             flex-direction: column;
             justify-content: space-around;
             padding: 0 70px 30px 0;
@@ -120,13 +123,12 @@
         position: relative;
 
         @include for-mobiles() {
+            width: 100%;
             font-size: 14px;
             line-height: 17px;
             padding: 22px 0 0;
             height: 154px;
-            width: 100%;
-            flex-direction: row;
-            justify-content: space-between;
+
             margin-bottom: 22px;
         }
 
@@ -183,15 +185,12 @@
         }
 
         @include for-mobiles() {
-            flex: 1 1 40%;
-
+            width: 50%;
+            text-align: center;
             &:last-of-type {
                 margin-bottom: 0;
             }
 
-            &:nth-of-type(even) {
-                text-align: end;
-            }
         }
 
         @include for-grand-mobiles() {
@@ -350,7 +349,9 @@
             flex: 1 1 50%;
             padding: 0;
             padding-top: 26px;
-            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -425,7 +426,7 @@
         font-size: 16px;
         line-height: 20px;
         display: flex;
-        justify-content: flex-end;
+        justify-content:center;
 
         @include for-mobiles() {
             justify-content: center;
@@ -435,10 +436,11 @@
         }
 
         @include for-grand-mobiles() {
-            justify-content: flex-end;
+            justify-content:flex-end;
             font-size: 12px;
             line-height: 15px;
             margin-top: 21px;
+            margin-right: 20px;
         }
     }
 

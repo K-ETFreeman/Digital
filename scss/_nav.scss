@@ -1,8 +1,7 @@
 //MEDIA
 
-
 $bg_grey_color: #f0f0f0;
-$blue_color: #3EA3F2;
+$blue_color: #3ea3f2;
 
 .header-contacts {
     padding: 9px 0 7px 0;
@@ -15,7 +14,6 @@ $blue_color: #3EA3F2;
     &__list {
         display: flex;
         align-content: center;
-
     }
 
     &__list-item {
@@ -44,7 +42,7 @@ $blue_color: #3EA3F2;
         }
     }
 
-    @media (max-width:1023px) {
+    @media (max-width: 1023px) {
         display: none;
     }
 }
@@ -53,12 +51,13 @@ $blue_color: #3EA3F2;
     background-color: $bg_grey_color;
     opacity: 0.9;
     margin-bottom: 29px;
-    
-    -webkit-box-shadow: 0px 15px 30px 0px rgba(240,240,240,1);
-    -moz-box-shadow: 0px 15px 30px 0px rgba(240,240,240,1);
-    box-shadow: 0px 15px 30px 0px rgba(240,240,240,1);
-    @media screen and (max-width:1024px){
+
+    -webkit-box-shadow: 0px 15px 30px 0px rgba(240, 240, 240, 1);
+    -moz-box-shadow: 0px 15px 30px 0px rgba(240, 240, 240, 1);
+    box-shadow: 0px 15px 30px 0px rgba(240, 240, 240, 1);
+    @media screen and (max-width: 1024px) {
         padding-bottom: 0;
+        margin-bottom: 0;
     }
 
     &-content {
@@ -92,7 +91,7 @@ $blue_color: #3EA3F2;
         display: block;
         width: 136px;
         height: 100%;
-        background-image: url('../assets/img/clever-marketing-logo.svg');
+        background-image: url("../assets/img/clever-marketing-logo.svg");
         background-repeat: no-repeat;
         background-size: auto;
         background-position: left center;
@@ -113,25 +112,24 @@ $blue_color: #3EA3F2;
 
     &-list {
         display: none;
-        
+
         @media (min-width: 1024px) {
             display: flex;
             flex: 1 0 auto;
-            
         }
     }
 
     &-item {
         flex: 1 1 auto;
 
-        &>a {
+        & > a {
             position: relative;
             display: flex;
             height: 100%;
             align-items: center;
             justify-content: center;
             font-size: 18px;
-            color: #3E3F43;
+            color: #3e3f43;
 
             @include for-grand-mobiles {
                 font-size: 15px;
@@ -143,7 +141,7 @@ $blue_color: #3EA3F2;
                 height: 0;
                 left: 0;
                 top: 0;
-                content: '';
+                content: "";
                 transition: height 0.15s ease-out;
                 background-color: $blue_color;
             }
@@ -153,7 +151,7 @@ $blue_color: #3EA3F2;
             }
         }
 
-        &[data-active="true"]>a::after {
+        &[data-active="true"] > a::after {
             height: 6px;
         }
     }
@@ -165,18 +163,18 @@ $blue_color: #3EA3F2;
         justify-content: flex-end;
         align-items: center;
         height: 100%;
-        
-        @include for-mobiles{
+
+        @include for-mobiles {
             flex-grow: 1;
         }
-        
+
         &::after {
             position: absolute;
             width: 100%;
             height: 0;
             left: 0;
             top: 0;
-            content: '';
+            content: "";
             transition: height 0.15s ease-out;
             background-color: $blue_color;
         }
@@ -185,9 +183,8 @@ $blue_color: #3EA3F2;
             height: 6px;
         }
 
-        &.is-active>.navigation-search-form {
+        &.is-active > .navigation-search-form {
             width: 332px;
-            
 
             @media (max-width: 320px) {
                 width: 200px;
@@ -258,48 +255,60 @@ $blue_color: #3EA3F2;
 // new subheader
 
 .header {
-
     &__subnavigation {
         width: 100%;
-        background-color: #FFFFFF;
+        background-color: #f8f8f8;
     }
 
     &__position {
         height: 40px;
+        border-bottom: 1px solid #e8e8e8;
+
+        @media screen and (max-width: 1024px) {
+            height: 50px;
+            padding: 15px 0px;
+        }
     }
 }
 
 .subnavigation {
-    
-    &__list {
+    position: relative;
+    &__container{
         display: flex;
         height: 50px;
+    }
+    &__list {
+        flex-grow: 1;
+        display: flex;
+        height: 100%;
+    }
 
-
-        &::before {
-            content: "";
-            width: 20px;
-            height: 100%;
-            background-image: url('../assets/icons/header_left.svg');
-            background-repeat: no-repeat;
-            background-position: left center;
-            flex: 2 0 auto;
+    &__button {
+        width: 20px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        cursor: pointer;
+       
+        &_disabled{
+            pointer-events: none;
+            opacity: .1;
         }
-        &::after {
-            content: "";
-            width: 20px;
-            height: 100%;
-            background-image: url('../assets/icons/header_right.svg');
-            background-repeat: no-repeat;
-            background-position: right center;
-            flex: 2 0 auto;
-        }
+    }
 
-        @include for-mobiles{
-            justify-content: space-around;
-            &::before, &::after{
-                width: 8px;
-            }
+    &__next {
+        background-image: url("../assets/icons/header_right.svg");
+        @media screen and (max-width: 400px){
+            position: absolute;
+            right: 3px;
+        }
+    }
+
+    &__prev {
+        background-image: url("../assets/icons/header_left.svg");
+        @media screen and (max-width: 400px){
+            position: absolute;
+            left: 3px;
         }
     }
 
@@ -307,22 +316,12 @@ $blue_color: #3EA3F2;
         flex: 1 1 auto;
         display: flex;
         justify-content: center;
-        
-        &:last-of-type,
-        &:nth-last-of-type(2) {
-            @media screen and (max-width: 1024px) {
-                display: none;
-            }
-        }
-
-        @include for-mobiles{
-            &:nth-last-of-type(3){
-                display: none;
-            }
-            flex: 2 1 auto;
+        &_hidden{
+            display: none;
         }
 
         a {
+            padding: 0 10px;
             position: relative;
             display: flex;
             height: 100%;
@@ -330,23 +329,24 @@ $blue_color: #3EA3F2;
 
             font-size: 16px;
             line-height: 19px;
-            color: #3E3F43;
+            color: #3e3f43;
             font-weight: 500;
-            @media screen and (max-width: 1024px){
+            @media screen and (max-width: 1024px) {
                 font-size: 14px;
             }
 
             @media screen and (max-width: 500px) {
                 font-size: 10px;
+                padding: 0;
             }
-            
+
             &::after {
                 position: absolute;
                 width: 100%;
                 height: 0;
                 left: 0;
                 bottom: 0;
-                content: '';
+                content: "";
                 transition: height 0.15s ease-out;
                 background-color: $blue_color;
             }
@@ -355,24 +355,19 @@ $blue_color: #3EA3F2;
                 height: 6px;
             }
         }
-        
-
     }
 }
 
-
 .position {
-
     &__list {
         display: flex;
         height: 100%;
-        border-bottom: 1px solid #E8E8E8;
     }
 
     &__listitem {
         padding-left: 10px;
         margin-right: 20px;
-        list-style: url('../assets/icons/arrow.svg');
+        list-style: url("../assets/icons/arrow.svg");
         &:first-of-type {
             list-style: none;
         }
@@ -381,19 +376,26 @@ $blue_color: #3EA3F2;
             font-weight: normal;
             font-size: 14px;
             line-height: 17px;
-            color: #3E3F43;
+            color: #3e3f43;
             opacity: 0.4;
         }
-        &:nth-of-type(2){
+
+        @include for-mobiles {
+            padding-left: 0px;
+            margin-right: 18px;
+            a {
+                font-size: 12px;
+            }
+        }
+        &:not(:last-of-type) {
             a {
                 opacity: 0.3;
             }
         }
         &:last-of-type {
-           a{
-            opacity: 1;
-           } 
+            a {
+                opacity: 1;
+            }
         }
     }
 }
-
