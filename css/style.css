@@ -2320,6 +2320,24 @@ body {
   line-height: 140%;
 }
 
+.marketing__image {
+  margin: 0 auto;
+  position: relative;
+}
+
+.marketing__image img,
+.marketing__image picture {
+  max-width: 100%;
+  height: auto;
+}
+
+.marketing__image svg.animated {
+  position: absolute;
+  left: 71.7%;
+  top: 54%;
+  width: 21.2%;
+}
+
 .marketing .button {
   padding: 0px 30px;
 }
