@@ -741,6 +741,7 @@ h2 {
   bottom: 0;
   right: 0;
   left: 0;
+  width: 100%;
   -o-object-fit: "cover";
      object-fit: "cover";
   -o-object-position: "center";
