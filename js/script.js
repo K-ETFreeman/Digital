@@ -10667,6 +10667,9 @@ var parlx = _toConsumableArray(document.querySelectorAll('.parallax')).map(funct
   return [item, parseFloat(item.getAttribute('data-depth'))];
 });
 
+parlx.forEach(function (item) {
+  return item[0].style = "transform: translateY(".concat(item[1] * (window.innerHeight / 2 - (mid.getBoundingClientRect().top + mid.getBoundingClientRect().bottom) / 2), "px)");
+});
 document.addEventListener('scroll', function () {
   parlx.forEach(function (item) {
     return item[0].style = "transform: translateY(".concat(item[1] * (window.innerHeight / 2 - (mid.getBoundingClientRect().top + mid.getBoundingClientRect().bottom) / 2), "px)");
