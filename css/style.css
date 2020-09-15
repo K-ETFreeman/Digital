@@ -208,6 +208,11 @@ h2 {
   margin-right: 10px;
 }
 
+.logo_footer svg {
+  width: 72px;
+  height: 72px;
+}
+
 .logo__name {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -687,7 +692,7 @@ h2 {
 
 .wrapper {
   width: 74%;
-  max-width: 1420px;
+  max-width: 1450px;
   margin: 0 auto;
   min-width: 1050px;
 }
@@ -1245,8 +1250,89 @@ main section {
   overflow: hidden;
 }
 
+.parallax {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.hole {
+  border-radius: 50%;
+  -webkit-transform-origin: right center;
+      -ms-transform-origin: right center;
+          transform-origin: right center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 871px;
+  height: 871px;
+  -webkit-box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.5);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#151517), to(#3e3f43));
+  background-image: -o-linear-gradient(bottom, #151517 0%, #3e3f43 100%);
+  background-image: linear-gradient(0deg, #151517 0%, #3e3f43 100%);
+}
+
+.hole__inner {
+  position: relative;
+  border-radius: 50%;
+  width: 777px;
+  height: 777px;
+  -webkit-box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.5);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(62, 63, 67, 0.2)), to(#3e3f43));
+  background-image: -o-linear-gradient(bottom, rgba(62, 63, 67, 0.2) 0%, #3e3f43 100%);
+  background-image: linear-gradient(0deg, rgba(62, 63, 67, 0.2) 0%, #3e3f43 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hole__center {
+  border-radius: 50%;
+  width: 685px;
+  height: 685px;
+  -webkit-box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.5);
+  background: -o-radial-gradient(circle, #F97700 0%, #F83C00 100%);
+  background: radial-gradient(circle, #F97700 0%, #F83C00 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hole__center svg {
+  fill: white;
+  position: absolute;
+  right: 0;
+  top: 12.5%;
+  height: 92.5%;
+  width: 94%;
+}
+
+.cases__bgtext {
+  display: none;
+}
+
+.cases__slide-sharelink {
+  fill: #F83C00;
+}
+
 .greeting {
   overflow: visible;
+  position: relative;
 }
 
 .greeting .wrapper {
@@ -1268,7 +1354,7 @@ main section {
   line-height: 140%;
 }
 
-.greeting__backimg {
+.greeting__back {
   z-index: -1;
   position: absolute;
   right: 0;
@@ -1382,9 +1468,9 @@ main section {
 }
 
 .tile_orange {
-  background-image: -webkit-gradient(linear, right top, left top, from(#f97700), to(#f83b00));
-  background-image: -o-linear-gradient(right, #f97700 0%, #f83b00 100%);
-  background-image: linear-gradient(270deg, #f97700 0%, #f83b00 100%);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#F83C00), to(#F97700));
+  background-image: -o-linear-gradient(bottom left, #F83C00 0%, #F97700 100%);
+  background-image: linear-gradient(to top right, #F83C00 0%, #F97700 100%);
 }
 
 .tile_orange .tile__icon,
@@ -3424,7 +3510,7 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1700px) {
-  .greeting__backimg {
+  .greeting__back {
     -webkit-transform: scale(0.9) translateY(-40%) translateX(34%);
         -ms-transform: scale(0.9) translateY(-40%) translateX(34%);
             transform: scale(0.9) translateY(-40%) translateX(34%);
@@ -3444,7 +3530,7 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1500px) {
-  .greeting__backimg {
+  .greeting__back {
     -webkit-transform: scale(0.8) translateY(-40%) translateX(34%);
         -ms-transform: scale(0.8) translateY(-40%) translateX(34%);
             transform: scale(0.8) translateY(-40%) translateX(34%);
@@ -3480,7 +3566,7 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1300px) {
-  .greeting__backimg {
+  .greeting__back {
     -webkit-transform: scale(0.75) translateY(-50%) translateX(34%);
         -ms-transform: scale(0.75) translateY(-50%) translateX(34%);
             transform: scale(0.75) translateY(-50%) translateX(34%);
@@ -3529,7 +3615,7 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 1100px) {
-  .greeting__backimg {
+  .greeting__back {
     -webkit-transform: scale(0.65) translateY(-40%) translateX(44%);
         -ms-transform: scale(0.65) translateY(-40%) translateX(44%);
             transform: scale(0.65) translateY(-40%) translateX(44%);
@@ -3745,7 +3831,7 @@ button.swiper-pagination-bullet {
 }
 
 @media screen and (max-width: 850px) {
-  .greeting__backimg {
+  .greeting__back {
     -webkit-transform: scale(0.45) translateY(-70%) translateX(64%);
         -ms-transform: scale(0.45) translateY(-70%) translateX(64%);
             transform: scale(0.45) translateY(-70%) translateX(64%);
@@ -3953,7 +4039,7 @@ button.swiper-pagination-bullet {
             transform: translateX(-50%);
   }
 
-  .greeting__backimg {
+  .greeting__back {
     -webkit-transform: translateY(-30%) scale(0.25) translateX(54%);
         -ms-transform: translateY(-30%) scale(0.25) translateX(54%);
             transform: translateY(-30%) scale(0.25) translateX(54%);
@@ -4112,6 +4198,14 @@ button.swiper-pagination-bullet {
 
   .logo svg {
     width: calc(32.25px + (100vw - 1440px) * (0.0224));
+  }
+
+  .logo_footer svg {
+    height: calc(54px + (100vw - 1440px) * (0.0375));
+  }
+
+  .logo_footer svg {
+    width: calc(54px + (100vw - 1440px) * (0.0375));
   }
 
   .logo__name {
@@ -4918,6 +5012,14 @@ button.swiper-pagination-bullet {
 
   .logo svg {
     width: 32.25px;
+  }
+
+  .logo_footer svg {
+    height: 54px;
+  }
+
+  .logo_footer svg {
+    width: 54px;
   }
 
   .logo__name {
