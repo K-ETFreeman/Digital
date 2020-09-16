@@ -1140,7 +1140,6 @@ main section {
   border-radius: 50%;
   -webkit-box-shadow: inset 0 4px 50px black;
           box-shadow: inset 0 4px 50px black;
-  z-index: 999;
 }
 
 .hole__center {
@@ -1659,6 +1658,14 @@ body,
 .principles__back .hole__inner,
 .principles__back .hole__center {
   border-radius: 10%;
+}
+
+.principles__back .hole::after,
+.principles__back .hole__inner::after,
+.principles__back .hole__center::after {
+  border-radius: 10%;
+  -webkit-box-shadow: inset 0 4px 30px black;
+          box-shadow: inset 0 4px 30px black;
 }
 
 .principles__title {
