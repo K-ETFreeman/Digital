@@ -1092,6 +1092,8 @@ main section {
           align-items: center;
   width: 45.3vw;
   height: 45.3vw;
+  max-width: 900px;
+  max-height: 900px;
   position: absolute;
   top: 0;
   right: 0;
@@ -1170,6 +1172,10 @@ body,
   overflow: visible;
 }
 
+.greeting .wrapper {
+  position: relative;
+}
+
 .greeting__title {
   padding-top: 2vw;
   max-width: 660px;
@@ -1188,13 +1194,14 @@ body,
 
 .greeting__back {
   position: absolute;
-  width: 100%;
+  width: 100vw;
+  max-width: 1920px;
   height: 100vh;
-  right: -3%;
-  top: -55px;
+  right: 50%;
+  top: -135px;
   z-index: -1;
-  -webkit-transform: translateZ(-5px) scale(1.5);
-          transform: translateZ(-5px) scale(1.5);
+  -webkit-transform: translateX(50%) translateZ(-5px) scale(1.5);
+          transform: translateX(50%) translateZ(-5px) scale(1.5);
 }
 
 .greeting__button {
@@ -1441,6 +1448,8 @@ body,
   width: 33.5vw;
   height: 33.5vw;
   right: 82%;
+  max-width: 800px;
+  max-height: 800px;
 }
 
 .aboutus .hole__center {
@@ -1606,6 +1615,8 @@ body,
           transform: rotate(-45deg);
   width: 26vw;
   height: 26vw;
+  max-width: 550px;
+  max-height: 550px;
 }
 
 .principles__back .hole__center {
@@ -2048,6 +2059,8 @@ body,
 .results .hole {
   width: 38.5vw;
   height: 38.5vw;
+  max-width: 800px;
+  max-height: 800px;
   top: 50%;
   right: 0;
   -webkit-transform: translateY(-50%);
@@ -4711,7 +4724,7 @@ button.swiper-pagination-bullet {
   }
 
   .greeting__back {
-    top: calc(500px + (100vw - 320px) * (-0.44643));
+    top: calc(480px + (100vw - 320px) * (-0.49107));
   }
 
   .grid__tile {
@@ -5055,7 +5068,7 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1920px) and (min-width: 769px) {
   .greeting__back {
-    top: calc(110px + (100vw - 769px) * (-0.14335));
+    top: calc(30px + (100vw - 769px) * (-0.14335));
   }
 }
 
