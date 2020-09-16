@@ -1170,6 +1170,7 @@ body,
 
 .greeting {
   overflow: visible;
+  padding-bottom: 40px;
 }
 
 .greeting .wrapper {
@@ -1200,8 +1201,8 @@ body,
   right: 50%;
   top: -135px;
   z-index: -1;
-  -webkit-transform: translateX(50%) translateZ(-5px) scale(1.5);
-          transform: translateX(50%) translateZ(-5px) scale(1.5);
+  -webkit-transform: translateX(52%) translateZ(-5px) scale(1.5);
+          transform: translateX(52%) translateZ(-5px) scale(1.5);
 }
 
 .greeting__button {
@@ -1782,6 +1783,11 @@ body,
   height: 30px;
 }
 
+.consultation {
+  -webkit-transform: translateZ(-2px) scale(1.2);
+          transform: translateZ(-2px) scale(1.2);
+}
+
 .consultation .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2001,6 +2007,7 @@ body,
 
 .results {
   overflow: visible;
+  margin-bottom: 135px;
 }
 
 .results .wrapper {
@@ -2040,10 +2047,10 @@ body,
 .results__back {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
-  -webkit-transform: translateY(-65%) translateZ(-5px) scale(1.5);
-          transform: translateY(-65%) translateZ(-5px) scale(1.5);
+  -webkit-transform: translateY(-95%) translateZ(-5px) scale(1.5);
+          transform: translateY(-95%) translateZ(-5px) scale(1.5);
 }
 
 .results .hole {
@@ -4725,6 +4732,10 @@ button.swiper-pagination-bullet {
     font-size: calc(12px + (100vw - 320px) * (0.00446));
   }
 
+  .consultation {
+    padding-bottom: calc(60px + (100vw - 320px) * (0.04464));
+  }
+
   .consultation__subtitle {
     font-size: calc(12px + (100vw - 320px) * (0.01339));
   }
@@ -5180,6 +5191,12 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 1920px) and (min-width: 1024px) {
   .teamblock__name {
     font-size: calc(18px + (100vw - 1024px) * (0.00446));
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 320px) {
+  .results {
+    margin-bottom: calc(40px + (100vw - 320px) * (0.05937));
   }
 }
 
