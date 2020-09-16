@@ -1116,8 +1116,6 @@ main section {
   border-radius: 50%;
   width: 89%;
   height: 89%;
-  -webkit-box-shadow: inset 0 4px 40px rgba(0, 0, 0, 0.9);
-          box-shadow: inset 0 4px 40px rgba(0, 0, 0, 0.9);
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -1147,8 +1145,6 @@ main section {
   border-radius: 50%;
   width: 88%;
   height: 88%;
-  -webkit-box-shadow: inset 0 4px 40px rgba(0, 0, 0, 0.9);
-          box-shadow: inset 0 4px 40px rgba(0, 0, 0, 0.9);
   background: -o-radial-gradient(circle, #F97700 0%, #F83C00 100%);
   background: radial-gradient(circle, #F97700 0%, #F83C00 100%);
   overflow: hidden;
@@ -1879,9 +1875,6 @@ body,
 }
 
 .consultation__content {
-  -webkit-transform: rotate(3.63deg);
-      -ms-transform: rotate(3.63deg);
-          transform: rotate(3.63deg);
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -1894,6 +1887,12 @@ body,
       -ms-flex-align: center;
           align-items: center;
   max-width: 460px;
+}
+
+.consultation__content > * {
+  -webkit-transform: rotate(3.63deg);
+      -ms-transform: rotate(3.63deg);
+          transform: rotate(3.63deg);
 }
 
 .consultation__title {
@@ -2083,8 +2082,18 @@ body,
   width: 100%;
   height: 100%;
   z-index: -1;
-  -webkit-transform: translateY(-200%) translateZ(-5px) scale(1.5);
-          transform: translateY(-200%) translateZ(-5px) scale(1.5);
+  top: 30%;
+  -webkit-transform: translateY(-50%) translateZ(-5px) scale(1.5);
+          transform: translateY(-50%) translateZ(-5px) scale(1.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .results .hole {
@@ -2092,11 +2101,6 @@ body,
   height: 38.5vw;
   max-width: 800px;
   max-height: 800px;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .results .hole .hole__center {
@@ -3579,6 +3583,10 @@ button.swiper-pagination-bullet {
   .grid__tile_jump4 {
     width: calc(25% - 9px);
   }
+
+  .results__back {
+    top: 40%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -3788,6 +3796,10 @@ button.swiper-pagination-bullet {
 
   .aboutus__content {
     width: 100%;
+  }
+
+  .results__back {
+    top: 50%;
   }
 }
 
