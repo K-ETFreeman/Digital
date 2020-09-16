@@ -10662,4 +10662,10 @@ document.querySelectorAll('.hoverjs').forEach(function (item) {
     document.getElementById(item.getAttribute('data-hoverid')).classList.remove('hover');
   });
 });
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene, {
+  RelativeInput: true,
+  selector: '.hole__inner,.hole__center,svg',
+  inputElement: document.querySelector('.greeting')
+});
 objectFitImages();
