@@ -10662,10 +10662,14 @@ document.querySelectorAll('.hoverjs').forEach(function (item) {
     document.getElementById(item.getAttribute('data-hoverid')).classList.remove('hover');
   });
 });
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene, {
+document.querySelectorAll('.hole').forEach(function (item) {
+  return new Parallax(item, {
+    RelativeInput: true,
+    selector: '.hole__inner,.hole__center,svg'
+  });
+});
+var parallaxInstance = new Parallax(document.querySelector('.scene'), {
   RelativeInput: true,
-  selector: '.hole__inner,.hole__center,svg',
-  inputElement: document.querySelector('.greeting')
+  selector: '.consultation__outer2,.consultation__inner,.consultation__content'
 });
 objectFitImages();
