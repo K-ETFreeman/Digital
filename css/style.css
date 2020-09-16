@@ -2007,16 +2007,6 @@ body,
   position: relative;
 }
 
-.results__backimg {
-  z-index: -1;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%) translateX(20%);
-      -ms-transform: translateY(-50%) translateX(20%);
-          transform: translateY(-50%) translateX(20%);
-}
-
 .results__title {
   margin-bottom: 60px;
 }
@@ -3464,14 +3454,6 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (max-width: 1500px) {
-  .results__backimg {
-    -webkit-transform: translateY(-50%) translateX(20%) scale(0.7);
-        -ms-transform: translateY(-50%) translateX(20%) scale(0.7);
-            transform: translateY(-50%) translateX(20%) scale(0.7);
-  }
-}
-
 @media screen and (max-width: 1439px) {
   .tile__title {
     font-size: 18px;
@@ -3534,14 +3516,6 @@ button.swiper-pagination-bullet {
 
   .grid__tile_jump4 {
     width: calc(25% - 9px);
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .results__backimg {
-    -webkit-transform: translateY(-50%) translateX(40%) scale(0.7);
-        -ms-transform: translateY(-50%) translateX(40%) scale(0.7);
-            transform: translateY(-50%) translateX(40%) scale(0.7);
   }
 }
 
@@ -3739,6 +3713,12 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media screen and (max-width: 930px) {
+  .results__back {
+    right: -20%;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .aboutus__video {
     width: 80%;
@@ -3812,14 +3792,6 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media screen and (max-width: 830px) {
-  .results__backimg {
-    -webkit-transform: translateY(-20%) translateX(40%) scale(0.7);
-        -ms-transform: translateY(-20%) translateX(40%) scale(0.7);
-            transform: translateY(-20%) translateX(40%) scale(0.7);
-  }
-}
-
 @media screen and (max-width: 800px) {
   .aboutus__backimg {
     -webkit-transform: translateY(-40%) translateX(-50%) scale(0.55);
@@ -3888,6 +3860,10 @@ button.swiper-pagination-bullet {
     width: 200px;
   }
 
+  .results__back {
+    display: none;
+  }
+
   .cases {
     padding-bottom: 40px;
   }
@@ -3910,14 +3886,6 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 767px) {
   .footer__logotext {
     padding-bottom: 25px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .results__backimg {
-    -webkit-transform: translateY(-30%) translateX(50%) scale(0.6);
-        -ms-transform: translateY(-30%) translateX(50%) scale(0.6);
-            transform: translateY(-30%) translateX(50%) scale(0.6);
   }
 }
 
@@ -4023,12 +3991,6 @@ button.swiper-pagination-bullet {
     -webkit-transform: translateY(-45%) translateX(-50%) scale(0.4);
         -ms-transform: translateY(-45%) translateX(-50%) scale(0.4);
             transform: translateY(-45%) translateX(-50%) scale(0.4);
-  }
-
-  .results__backimg {
-    -webkit-transform: translateY(-30%) translateX(50%) scale(0.3);
-        -ms-transform: translateY(-30%) translateX(50%) scale(0.3);
-            transform: translateY(-30%) translateX(50%) scale(0.3);
   }
 }
 
