@@ -1159,7 +1159,7 @@ main section {
 }
 
 .cases__bgtext {
-  display: none;
+  color: #434548 !important;
 }
 
 .cases__slide-sharelink {
@@ -1968,20 +1968,8 @@ body {
   position: relative;
 }
 
-.results__title {
-  margin-bottom: 60px;
-}
-
 .results__title_lesspace {
-  margin-bottom: 25px;
-}
-
-.results__title_nospace {
-  margin-bottom: 5px !important;
-}
-
-.results__title a {
-  color: #3ea3f2;
+  margin-bottom: 35px;
 }
 
 .results__list {
@@ -1991,11 +1979,8 @@ body {
 .results__list li {
   line-height: 130%;
   font-size: 16px;
-  margin-bottom: 30px;
-}
-
-.results__list_lesspace li {
-  margin-bottom: 20px;
+  margin-bottom: 500px;
+  margin-bottom: 35px;
 }
 
 .results__back {
@@ -4229,12 +4214,8 @@ button.swiper-pagination-bullet {
     font-size: calc(16px + (100vw - 1440px) * (0.00417));
   }
 
-  .results__title {
-    margin-bottom: calc(45px + (100vw - 1440px) * (0.03125));
-  }
-
   .results__title_lesspace {
-    margin-bottom: calc(18.75px + (100vw - 1440px) * (0.01302));
+    margin-bottom: calc(26.25px + (100vw - 1440px) * (0.01823));
   }
 
   .results__list {
@@ -4242,11 +4223,7 @@ button.swiper-pagination-bullet {
   }
 
   .results__list li {
-    margin-bottom: calc(22.5px + (100vw - 1440px) * (0.01563));
-  }
-
-  .results__list_lesspace li {
-    margin-bottom: calc(15px + (100vw - 1440px) * (0.01042));
+    margin-bottom: calc(26.25px + (100vw - 1440px) * (0.01823));
   }
 
   .numblist_big li::before {
@@ -4459,12 +4436,8 @@ button.swiper-pagination-bullet {
     margin-bottom: 30px;
   }
 
-  .results__title {
-    margin-bottom: 45px;
-  }
-
   .results__title_lesspace {
-    margin-bottom: 18.75px;
+    margin-bottom: 26.25px;
   }
 
   .results__list {
@@ -4472,11 +4445,7 @@ button.swiper-pagination-bullet {
   }
 
   .results__list li {
-    margin-bottom: 22.5px;
-  }
-
-  .results__list_lesspace li {
-    margin-bottom: 15px;
+    margin-bottom: 26.25px;
   }
 
   .numblist_big li::before {
@@ -4699,10 +4668,6 @@ button.swiper-pagination-bullet {
 
   .consultation__subtitle {
     font-size: calc(12px + (100vw - 320px) * (0.01339));
-  }
-
-  .results__title {
-    margin-bottom: calc(20px + (100vw - 320px) * (0.03348));
   }
 
   .results__list li {
