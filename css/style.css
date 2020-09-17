@@ -802,8 +802,8 @@ h2 {
 
 .button_orange {
   background-color: #F83C00;
-  -webkit-box-shadow: 0 10px 25px -10px #F97700;
-          box-shadow: 0 10px 25px -10px #F97700;
+  -webkit-box-shadow: 0 10px 25px -10px #F83C00;
+          box-shadow: 0 10px 25px -10px #F83C00;
 }
 
 .button_orange,
@@ -812,9 +812,9 @@ h2 {
 }
 
 .button_orange:hover {
-  background-color: #f93c00;
-  -webkit-box-shadow: 0 10px 25px -8px #f87700;
-          box-shadow: 0 10px 25px -8px #f87700;
+  background-color: #F83C00;
+  -webkit-box-shadow: 0 15px 30px -10px #F83C00;
+          box-shadow: 0 15px 30px -10px #F83C00;
 }
 
 .button_black {
