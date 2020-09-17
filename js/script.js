@@ -137,14 +137,16 @@ document.querySelectorAll('.interactive-trigger').forEach(function (item) {
 var burger = document.querySelector('.burger');
 
 burger.onclick = function (e) {
+  var target = document.querySelector('.parallax');
+
   if (burger.classList.contains('active')) {
-    window.scroll({
+    target.scroll({
       top: 0,
       behavior: 'smooth'
     });
-    bodyScrollLock.disableBodyScroll(document.body);
+    target.style = 'overflow:hidden';
   } else {
-    bodyScrollLock.enableBodyScroll(document.body);
+    target.style = "";
   }
 };
 
