@@ -1054,10 +1054,6 @@ body {
   opacity: 0;
 }
 
-.header .swiper-slide:first-child {
-  margin-left: auto;
-}
-
 .highlight {
   color: #F83C00;
 }
@@ -1194,7 +1190,7 @@ body {
 .greeting__title {
   padding-top: 2vw;
   max-width: 660px;
-  margin-bottom: 1vw;
+  margin-bottom: 20px;
   line-height: 100%;
 }
 
@@ -1435,7 +1431,6 @@ body {
 }
 
 .aboutus .wrapper {
-  padding-top: 1vw;
   position: relative;
 }
 
@@ -1810,6 +1805,8 @@ body {
   -webkit-transform: translateZ(-2px) scale(1.2);
   -moz-transform: translateZ(-2px);
   -ms-transform: translateZ(-2px);
+  margin-bottom: 80px;
+  margin-top: 80px;
 }
 
 .consultation .wrapper {
@@ -3387,6 +3384,12 @@ button.swiper-pagination-bullet {
             transform: scaleY(1);
   }
 
+  .header .headline {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
   .principles__content {
     width: 100%;
   }
@@ -3440,6 +3443,12 @@ button.swiper-pagination-bullet {
 
   .cases__button {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .aboutus .wrapper {
+    padding-top: 1vw;
   }
 }
 
@@ -3630,6 +3639,14 @@ button.swiper-pagination-bullet {
     padding-top: 0;
   }
 
+  .header .headline__links {
+    width: 100%;
+  }
+
+  .header .headline__recall {
+    margin-left: auto;
+  }
+
   .principles__content {
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
@@ -3724,63 +3741,6 @@ button.swiper-pagination-bullet {
   .small-icon {
     margin-right: 3px;
   }
-
-  .headline__contacts {
-    width: 140px;
-    overflow: hidden;
-  }
-
-  .headline__contacts a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%;
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-  }
-
-  .headline__contacts a:nth-child(1) {
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-delay: -6s;
-            animation-delay: -6s;
-    -webkit-animation-name: roll;
-            animation-name: roll;
-    -webkit-animation-duration: 6s;
-            animation-duration: 6s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-  }
-
-  .headline__contacts a:nth-child(2) {
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-delay: -4s;
-            animation-delay: -4s;
-    -webkit-animation-name: roll;
-            animation-name: roll;
-    -webkit-animation-duration: 6s;
-            animation-duration: 6s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-  }
-
-  .headline__contacts a:nth-child(3) {
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-delay: -2s;
-            animation-delay: -2s;
-    -webkit-animation-name: roll;
-            animation-name: roll;
-    -webkit-animation-duration: 6s;
-            animation-duration: 6s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -3872,6 +3832,65 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .headline__contacts {
+    width: 140px;
+    overflow: hidden;
+  }
+
+  .headline__contacts a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+  }
+
+  .headline__contacts a:nth-child(1) {
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: -6s;
+            animation-delay: -6s;
+    -webkit-animation-name: roll;
+            animation-name: roll;
+    -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+
+  .headline__contacts a:nth-child(2) {
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: -4s;
+            animation-delay: -4s;
+    -webkit-animation-name: roll;
+            animation-name: roll;
+    -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+
+  .headline__contacts a:nth-child(3) {
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
+    -webkit-animation-name: roll;
+            animation-name: roll;
+    -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .header__content {
     -webkit-box-pack: justify;
@@ -3940,12 +3959,6 @@ button.swiper-pagination-bullet {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .headline__contacts {
-    display: none;
   }
 }
 
@@ -4942,6 +4955,12 @@ button.swiper-pagination-bullet {
 
   .headline__contacts a:last-child {
     margin-right: calc(0px + (100vw - 1000px) * (0.1));
+  }
+}
+
+@media screen and (max-width: 400px) and (min-width: 320px) {
+  .headline__contacts a[href^='tel'] {
+    letter-spacing: calc(-0.4pxpx + (100vw - 320px) * (0.005px));
   }
 }
 
