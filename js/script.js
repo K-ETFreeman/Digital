@@ -104,21 +104,25 @@ document.querySelectorAll('.interactive-trigger').forEach(function (item) {
       };
 
       parent.onmouseenter = function () {
+        if (window.innerWidth < 1024) return;
         hovP = true;
         if (!item.classList.contains('active')) show();
       };
 
       parent.onmouseleave = function () {
+        if (window.innerWidth < 1024) return;
         hovP = false;
         if (!hovP && !hovI) delayhide();
       };
 
       item.onmouseenter = function () {
+        if (window.innerWidth < 1024) return;
         hovI = true;
         if (!item.classList.contains('active')) show();
       };
 
       item.onmouseleave = function () {
+        if (window.innerWidth < 1024) return;
         hovI = false;
         if (!hovP && !hovI) delayhide();
       };
@@ -137,14 +141,14 @@ document.querySelectorAll('.interactive-trigger').forEach(function (item) {
 var burger = document.querySelector('.burger');
 
 burger.onclick = function (e) {
-  var target = document.querySelector('.parallax');
+  var target = document.body;
 
   if (burger.classList.contains('active')) {
     target.scroll({
       top: 0,
       behavior: 'smooth'
     });
-    target.style = 'overflow:hidden';
+    target.style = 'height: 100vh; overflow:hidden';
   } else {
     target.style = "";
   }
