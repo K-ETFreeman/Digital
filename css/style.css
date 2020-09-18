@@ -236,6 +236,7 @@ h2 {
 
 .header {
   position: relative;
+  z-index: 5;
   font-family: Raleway;
   -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
@@ -683,6 +684,11 @@ h2 {
 .breadcrumbs ul li a {
   font-size: 14px;
   color: white;
+}
+
+.breadcrumbs {
+  position: relative;
+  z-index: 4;
 }
 
 .wrapper {
@@ -1185,10 +1191,6 @@ section > .wrapper {
           transform-style: inherit;
 }
 
-main {
-  z-index: -1;
-}
-
 .greeting {
   overflow: visible;
   padding-bottom: 40px;
@@ -1217,7 +1219,6 @@ main {
   height: 100vh;
   right: 50%;
   top: -135px;
-  z-index: -1;
   -webkit-transform: translateX(52%) translateZ(-5px) scale(1.5);
           transform: translateX(52%) translateZ(-5px) scale(1.5);
   -ms-transform: translateX(52%) translateZ(-5px);
@@ -3266,6 +3267,11 @@ button.swiper-pagination-bullet {
 
 .footer__endline span:last-child {
   font-weight: 500;
+}
+
+.footer {
+  position: relative;
+  z-index: 4;
 }
 
 @media screen and (min-width: 769px) {
