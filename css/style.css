@@ -1069,12 +1069,18 @@ html {
 }
 
 main {
+  pointer-events: none;
   position: relative;
 }
 
 main section {
+  pointer-events: auto;
   overflow: hidden;
   padding: 80px 0;
+}
+
+main .footer {
+  pointer-events: auto;
 }
 
 .hole {
@@ -1913,7 +1919,7 @@ section > .wrapper {
 }
 
 .form {
-  pointer-events: all;
+  pointer-events: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
